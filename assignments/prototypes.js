@@ -104,6 +104,60 @@
   console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
 */
 
+/*
+  === GameObject ===
+  * createdAt
+  * name
+  * dimensions (These represent the character's size in the video game)
+  * destroy() // prototype method that returns: `${this.name} was removed from the game.`
+*/
+
+function GameObject (createdAt, name, dimensions) {
+
+this.createdAt = createdAt ;
+this.name = name ;
+this.dimensions = dimensions ;
+
+}
+GameObject.prototype.destroy = function (){
+  return`${this.name} was removed from the game.`;
+}
+
+/*
+  === CharacterStats ===
+  * healthPoints
+  * takeDamage() // prototype method -> returns the string '<object name> took damage.'
+  * should inherit destroy() from GameObject's prototype
+*/
+
+function CharacterStats () {
+  this.healthPoints = healthPoints;
+}
+CharacterStats.prototype.takeDamage = function () {
+  return `${this.name} took damage.`
+}
+
+
+
+/*
+  === Humanoid (Having an appearance or character resembling that of a human.) ===
+  * team
+  * weapons
+  * language
+  * greet() // prototype method -> returns the string '<object name> offers a greeting in <object language>.'
+  * should inherit destroy() from GameObject through CharacterStats
+  * should inherit takeDamage() from CharacterStats
+*/
+
+function Humanoid () {
+this.team 
+this.weapons 
+this.language
+}
+
+ 
+
+
   // Stretch task: 
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
