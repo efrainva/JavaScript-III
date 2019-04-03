@@ -10,16 +10,24 @@
 */
 
 // Principle 1
-
+console.log(this);
 // code example for Window Binding
-
+console.log("hello")
 // Principle 2
 
 // code example for Implicit Binding
-
+const human = {
+  name:"tom",
+  age:"24",
+  info:function(){
+    return `${this.name} is ${this.age}`;
+  }
+}
+console.log(human.info());
 // Principle 3
 
 // code example for New Binding
+
 
 // Principle 4
 
