@@ -149,12 +149,14 @@ CharacterStats.prototype.takeDamage = function () {
   * should inherit takeDamage() from CharacterStats
 */
 
-function Humanoid () {
-this.team 
-this.weapons 
-this.language
+function Humanoid (team, weapons, language) {
+this.team  = team
+this.weapons = weapons
+this.language = language
+} 
+Humanoid .prototype.greeting = function (){
+  return `${this.team} offers a greeting in ${this.language}`
 }
-
  
 
 
